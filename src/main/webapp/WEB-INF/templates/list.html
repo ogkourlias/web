@@ -1,0 +1,18 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title th:text="#{tab.title}">_offline_</title>
+</head>
+<body>
+<div>hoi</div>
+
+<select th:name="Animal Selection">
+  <option th:each="name:${namesList}"
+          th:value="${name}"
+          th:text="'The ' + ${name}"
+          th:id="${name + '_option'}"
+          value="_name_">_name_</option>
+</select>
+</body>
+</html>
